@@ -1,20 +1,32 @@
 import random
 
-secret_number = random.randint(1, 10)
 
-guess = None
 
-while guess != secret_number:
 
-    guess = int(input("Guess a number between 1 and 10: "))
 
-    if guess < secret_number:
-        print("Too low! Try again.")
-    elif guess > secret_number:
-        print("Too high! Try again.")
+#code end
+
+def user_input(user_input):
+
+    user_input = str(input("Enter a letter to guess: "))
+    if(user_input == random_letter):
+        print("Congratulations! You guessed the correct letter.")
+
     else:
-        print("Congratulations! You guessed the number!")
+        print("Sorry, that's not correct. Try again!")
+
+
+user_input = input("Enter a letter to guess: ")
+print("You entered:", user_input)
 
 
 
-      
+def generate_random_alphabet(alphabet):
+    random_letter = random.choice(alphabet)
+
+    return random_letter
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+random_letter = generate_random_alphabet(alphabet)
+print("Random letter:", random_letter)
