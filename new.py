@@ -1,34 +1,12 @@
-def find_number_of_month():
+def triangle_finder(a, b, c):
+    if (a==b==c):
+        return "Equilateral"
+    elif (a==b or b==c or a==c):
+        return "Isosceles"
+    else:
+        return "Scalene"
 
 
-    status = int(input("Enter the month number (1-12): "))
-
-    match status:
-        case 1:
-            return "January"
-        case 2:
-            return "February"
-        case 3:
-            return "March"
-        case 4:
-            return "April"
-        case 5:
-            return "May"
-        case 6:
-            return "June"
-        case 7:
-            return "July"
-        case 8:
-            return "August"
-        case 9:
-            return "September"
-        case 10:
-            return "October"
-        case 11:
-            return "November"
-        case 12:
-            return "December"
-        case _:
-            return "Invalid month number"
-
-print(find_number_of_month())
+print(triangle_finder(1, 1, 1))
+print(triangle_finder(1, 1, 2))
+print(triangle_finder(1, 2, 3))
