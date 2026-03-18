@@ -1,28 +1,73 @@
-from datetime import date
+import math
+class determine_area_and_perimeter:
 
-class person:
+    def area():
+        pass
 
-    def __init__(self, name ,country, date_of_birth):
-        self.name =name
-        self.country =country
-        self.date_of_birth =date_of_birth
+    def perimeter():
+        pass
 
-    def calculate_age(self):
-        today = date.today()
-        age = today.year - self.date_of_birth.year
-        if today < date(today.year, self.date_of_birth.month, self.date_of_birth.day):
-            age -= 1
-        return age
+
+# Initialize the Circle object with a given radius
+
+class circle:
+    
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area_of_circle(self):
+        return math.pi*self.radius*self.radius
+    
+    
+    def perimeter_of_circle(self):
+        return math.pi*2*self.radius
+    
+    
+class rectangle:
+    
+    
+    def __init__(self,base,height):
+        self.base = base
+        self.height = height
         
+    def calculate_are_of_rectangle(self):
+        
+        return (self.base *self.height)
+    
+    def calculate_perimrter_of_rectangle(self):
+        
+        return (2*(self.base+self.height))
+    
+    
+r =7
+circle = circle(r)
+circle_area = circle.area_of_circle()
+circle_perimeter= circle.perimeter_of_circle()
 
-person1 = person("ayush","India",date(1962, 7, 12))
-person2 = person("Shweta Maddox", "Canada", date(1982, 10, 20))
-person3 = person("Elizaveta Tilman", "USA", date(2000, 1, 1))
+
+print("radius of circle is :",r)
+print("area of circle is :", circle_area)
+print("perimetr of circle is :", circle_perimeter)
 
 
 
-print(person1)
-print("name:",  person1.name)
-print("country :",person1.country)
-print("date of birth :",person1.date_of_birth)
-print("age is :", person1.calculate_age())
+# now time to call rectangle
+
+print()
+print()
+
+
+base = 4
+height = 5
+
+rectangle = rectangle(base,height)
+rectangle_area = rectangle.calculate_are_of_rectangle()
+rectangle_perimeter = rectangle.calculate_perimrter_of_rectangle()
+
+
+print("base of rectangle is :"+"height of rectangle is : ",base, height)
+print("area of rectangle is :",rectangle_area)
+print("perimeter of rectangle is :", rectangle_perimeter)
+
+        
+        
