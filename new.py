@@ -1,10 +1,13 @@
-a = [1,2,3,4,5]
-b = [1,2,3,3,5]
-
-
-if (a ==b):
-    print(a,b,"both lis are same \n")
-else:
-    print(a,b,"both list are not same")
-    
+def calculate_error(x,y):
+    try:
+        result= x/y
+        print("result :",result)
         
+    except ZeroDivisionError:
+        print("the divisior by zero")
+        
+        
+numerator = 100
+denominator = 0
+
+calculate_error(numerator,denominator)
