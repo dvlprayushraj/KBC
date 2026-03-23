@@ -1,18 +1,7 @@
-import functools
+nums = (1,2,3,4,5,6,7,8)
 
-def my_decorator(func):
-    """Decorator that adds logging around a function call."""
-    @functools.wraps(func)
-    def wrapper(*args, **kwargs):
-        print(f"product of two numbers is '{func.__name__}' runs")
-        result = func(*args, **kwargs)
-       
-        return result
-    return wrapper
+print("original nums ",nums)
 
-@my_decorator
-def calculate_multiplication(x,y):
-    print("the product of two number is :")
-    return x*y
-
-print(calculate_multiplication(5,4))
+result = map(lambda x: x+x+x,nums)
+print("\n triple the number is :")
+print(list(result))
