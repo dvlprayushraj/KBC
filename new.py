@@ -11,10 +11,22 @@ def my_decorator(func):
     return wrapper
 
 
+
 @my_decorator
-def multiply_numbers(x,y):
-    return x*y
+def calculate_multiplication_of_all_numbers(number):
+    result = 1
+    for x in number:
+        result *= x
+        
+        
+    return result
 
 
-result = multiply_numbers(10,20)
+result =calculate_multiplication_of_all_numbers([1,2,3,4,5])
 print(result)
+
+
+
+        
+    
+    
