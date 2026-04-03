@@ -1,7 +1,11 @@
-import numpy as np
+import cv2
 
-number =np.array([1,2,3,4,5,6,7,8,9,10])
+image = cv2.imread('image.jpg')
 
-even_number = number[number %2 ==0]
-print(even_number)
 
+if image is  not None:
+    cv2.imshow("image showing ", image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+else:
+    print("Image read successfully.")
