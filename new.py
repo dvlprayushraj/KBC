@@ -1,6 +1,7 @@
 import cv2
 
-image = cv2.imread('image1.jpg')
+
+image = cv2.imread('flower.png')
 
 image = cv2.resize(image,(0,0),fx=0.3,fy=0.3)
 
