@@ -18,6 +18,7 @@ while cap .isOpened():
         l_red = np.array([0,120,70])
         u_red = np.array([10,255,255])
         
+        
         mask1 = cv2.inRange(hsv_frame,l_red,u_red)
         
         ## range for upper red
@@ -26,12 +27,31 @@ while cap .isOpened():
         
         mask2 = cv2.inRange(hsv_frame,l_red,u_red)
         
+        
+        
         #generate the final red mark
         
         red_mark = mask1+mask2
         
-        cv2.imshow("red floak", red_mark)
-        cv2.waitKey(5) == ord('q')
+        
+        
+        #detect tthe thins that are not red
+        
+        
+        
+        #if cloak is not present show the current image 
+        
+        
+        #final output 
+        
+        
+        
+        
+        
+        cv2.imshow("cloak", red_mark)
+        if cv2.waitKey(5) == ord('q'):
+            break
+        
         
     
 cap.release()
