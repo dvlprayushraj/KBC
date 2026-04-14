@@ -17,7 +17,7 @@ for x,y,w,h in faces:
 
 cv2.imshow("image ", resize_image)
 
-cv2.waitKey(0) 
+ cv2.waitKey(0) 
     
 
 cv2.destroyAllWindows()
