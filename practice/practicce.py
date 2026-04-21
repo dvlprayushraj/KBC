@@ -17,7 +17,8 @@ for x,y,w,h in faces:
 
 cv2.imshow("image ", resize_image)
 
- cv2.waitKey(0) 
-    
+if cv2.waitKey(0) & 0xFF == ord('q')
+break
+
 
 cv2.destroyAllWindows()
